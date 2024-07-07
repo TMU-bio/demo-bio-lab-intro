@@ -1,7 +1,46 @@
 ---
-title: "SeimeiSotsuken"
+title: "202x年度 研究室紹介"
+toc: true
+toc-location: right
+listing: 
+    id: Lab
+    contents: /Lab
+    type: grid
+    fields: [image, title,]
 ---
 
-This is a Quarto website.
+::: {.callout-important}
+## 注意
+このサイトは生命科学科の学生に向けて公開しています。外部にURL等を公開しないようお願いします。
+:::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## 研究室配属までの流れ
+
+1. 研究室紹介
+    - 各研究室の先輩に直接話を聞けます。
+2. アンケート調査①・②
+    - その時点で各研究室を希望する人数を集計します。(日付未定)
+3. 予備調査
+    - アンケート調査の結果や研究室紹介を参考にして、希望の研究室を決定し、提出します。
+4. 配属先決定
+    - 人数調整などを行い、指導教員の許可をもらった上で配属先が決定します。
+
+```{mermaid}
+gantt
+    title 研究室配属の流れ
+    dateFormat YYYY-MM-DD
+    axisFormat  %m/%d
+    section 研究室配属
+    研究室所属説明会＆研究室紹介(9/29)      :2024-09-29, 1d
+    第一次希望調査(12/11-15)                :2024-12-11, 5d
+    第一次希望調査の結果開示(12/18)          :2024-12-18, 1d
+    最終調査(1/9-12)                    :2025-01-09, 4d
+    人数調節                    :2025-01-13, 2024-02-21
+    配属結果開示(2/22)                :2025-02-22, 1d
+```
+
+## 研究室一覧
+
+::: {#Lab}
+
+:::
