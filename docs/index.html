@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SeimeiSotsuken</title>
+<title>202x年度 研究室紹介 – SeimeiSotsuken</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +68,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Lab .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Lab'] = new List('listing-Lab', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -107,15 +170,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#研究室配属までの流れ" id="toc-研究室配属までの流れ" class="nav-link active" data-scroll-target="#研究室配属までの流れ">研究室配属までの流れ</a></li>
+  <li><a href="#研究室一覧" id="toc-研究室一覧" class="nav-link" data-scroll-target="#研究室一覧">研究室一覧</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SeimeiSotsuken</h1>
+<h1 class="title">202x年度 研究室紹介</h1>
 </div>
 
 
@@ -132,10 +202,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注意
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このサイトは生命科学科の学生に向けて公開しています。外部にURL等を公開しないようお願いします。</p>
+</div>
+</div>
+<section id="研究室配属までの流れ" class="level2">
+<h2 class="anchored" data-anchor-id="研究室配属までの流れ">研究室配属までの流れ</h2>
+<ol type="1">
+<li>研究室紹介
+<ul>
+<li>各研究室の先輩に直接話を聞けます。</li>
+</ul></li>
+<li>アンケート調査①・②
+<ul>
+<li>その時点で各研究室を希望する人数を集計します。(日付未定)</li>
+</ul></li>
+<li>予備調査
+<ul>
+<li>アンケート調査の結果や研究室紹介を参考にして、希望の研究室を決定し、提出します。</li>
+</ul></li>
+<li>配属先決定
+<ul>
+<li>人数調整などを行い、指導教員の許可をもらった上で配属先が決定します。</li>
+</ul></li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">gantt
+    title 研究室配属の流れ
+    dateFormat YYYY-MM-DD
+    axisFormat  %m/%d
+    section 研究室配属
+    研究室所属説明会＆研究室紹介(9/29)      :2024-09-29, 1d
+    第一次希望調査(12/11-15)                :2024-12-11, 5d
+    第一次希望調査の結果開示(12/18)          :2024-12-18, 1d
+    最終調査(1/9-12)                    :2025-01-09, 4d
+    人数調節                    :2025-01-13, 2024-02-21
+    配属結果開示(2/22)                :2025-02-22, 1d
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="研究室一覧" class="level2">
+<h2 class="anchored" data-anchor-id="研究室一覧">研究室一覧</h2>
+<div id="listing-Lab" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="バイオインフォマティクス,動物学,微生物学,数理計算生物学的手法,植物学,生態学,生物物理学,生理学,進化生物学,遺伝学,イベントあり,コアタイムなし,他大への進学OK,研究テーマが与えられる,研究テーマを自分で決める,自分のデスクがある,自由に休める" data-listing-file-modified-sort="1720324590172" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<a href="./Lab/sample-lab.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://tmu-bio.github.io/lab-intro/assets/images/drosophila%20-%20%E8%90%A9%E9%87%8E%E9%87%8C%E5%A5%88.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+進化遺伝学研究室(数理計算生物学グループ)
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
